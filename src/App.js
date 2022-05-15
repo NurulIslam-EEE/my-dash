@@ -7,6 +7,7 @@ import {
   Route,
 } from "react-router-dom";
 import { BarChart } from './components/BarChart/BarChart';
+import NavBar from './components/Shared/NavBar'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
     <Routes>
       <Route path="/" element={<SignUp />}/>
       <Route path="/barChart" element={<BarChart />}/>
+      <Route path="/nav" element={<NavBar />}/>
      
     </Routes>
   </BrowserRouter>

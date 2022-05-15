@@ -1,5 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
+import NavBar from '../Shared/NavBar'
 import * as d3 from "d3";
+
 
 export const BarChart = () => {
   const [data, setData] = useState([]);
@@ -14,9 +16,9 @@ export const BarChart = () => {
 
   },[])
   useEffect(() => {
-    const w = 700;
+    const w = 500;
     const h = 500;
-    const svg = d3.select(svgRef.current).attr("width", '90%').attr("height", h).style('overflow','visible').style('margin','10%' )
+    const svg = d3.select(svgRef.current).attr("width", '90%').attr("height", h).style('overflow','visible')
     const xScale = d3
       .scaleBand()
       .domain(data.map((val, i) => i))
@@ -46,6 +48,7 @@ export const BarChart = () => {
   }, [data]);
   return (
     <div>
+      <NavBar/>
       <svg className="chart" ref={svgRef}></svg>
     </div>
   );
