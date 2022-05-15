@@ -18,7 +18,7 @@ export default function SignUp() {
 
     if (!regularExpression.test(password)) {
       setPasswordWarn(
-        "Password should be minimum eight characters, at least one letter, one number and one special character"
+        "Password must have a minimum eight characters, at least one letter, one number and one special character"
       );
    
     } else if (password !== password2) {
